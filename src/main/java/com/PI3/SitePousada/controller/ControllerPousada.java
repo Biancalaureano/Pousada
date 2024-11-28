@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 
 
 
@@ -60,7 +61,7 @@ public class ControllerPousada {
 
         } 
      
-        return "redirect:/";
+        return "pagina-inicial";
      
      } 
      
@@ -89,6 +90,15 @@ public class ControllerPousada {
         
         return ResponseEntity.ok("Exclusão bem-sucedida");
 
+    }
+    
+    @PutMapping("/solicitacoes/{id}")
+    public ResponseEntity<String> atualizaSolicitacao(@PathVariable(value ="id") Integer id) {
+
+        solicitacaoService.atualizarSolicitacaoId(id);
+
+        return ResponseEntity.ok("Atualizaçao bem-sucedida");
+        
     }
     
 }

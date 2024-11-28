@@ -37,4 +37,38 @@ $(document).ready(function() {
         } 
     
   });
+  
+  
+  
+  
+  $('.atualizaStatus').change(function() {
+      
+        if ($(this).is(':checked')) {
+            
+            let id = $(this).val();
+            console.log(id);
+
+            $.ajax({
+                type: 'PUT',
+                url: 'http://localhost:8080/solicitacoes/' + id
+                
+                })
+                .done(function(response) {
+
+                    console.log(response);
+
+                    location.reload(true);
+                })
+                .fail(function(error) {
+                    // Lidar com erros de requisição, se houver
+                    console.log(error);
+                });
+      
+        } else {
+            
+            console.log('O checkbox não foi marcado.');
+            
+        }
+    });
+  
 });

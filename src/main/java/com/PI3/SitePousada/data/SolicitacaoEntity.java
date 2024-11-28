@@ -49,5 +49,7 @@ public class SolicitacaoEntity {
     private int quantidade_criancas;
     
     private String observacao;
+    
+    private boolean status;
 
 }

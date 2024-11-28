@@ -33,6 +33,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <th>Quantidade de adultos</th>
                         <th>Quantidade de crianças</th>
                         <th>Observações</th>
+                        <th>Concluido</th>
                         <th>       </th>
                     </tr>
 
@@ -46,6 +47,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <td th:text="${solicitacao.quantidade_adultos}"></td>
                         <td th:text="${solicitacao.quantidade_criancas}"></td>
                         <td th:text="${solicitacao.observacao}"></td>
+                        
+                        <td>
+                            
+                            <div class="form-check">
+                    
+                                <input class="form-check-input atualizaStatus" type="checkbox" id="atualizaStatus" th:value="${solicitacao.id}" 
+                                       th:checked="${solicitacao.status}" th:disabled="${solicitacao.status}">
+                               
+                            </div>
+                    
+                        </td>
                         
                         <td>
                     

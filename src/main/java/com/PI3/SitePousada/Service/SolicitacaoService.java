@@ -21,6 +21,7 @@ public class SolicitacaoService {
     public SolicitacaoEntity criarSolicitacao(SolicitacaoEntity solicitacao) { 
 
         solicitacao.setId(null);
+        solicitacao.setStatus(false);
         
         solicitacaoRepository.save(solicitacao); 
 
@@ -39,6 +40,26 @@ public class SolicitacaoService {
         solicitacao.setQuantidade_adultos(solicitacaoRequest.getQuantidade_adultos());
         solicitacao.setQuantidade_criancas(solicitacaoRequest.getQuantidade_criancas());
         solicitacao.setObservacao(solicitacaoRequest.getObservacao());
+        solicitacao.setStatus(solicitacaoRequest.isStatus());
+        
+        solicitacaoRepository.save(solicitacao); 
+        
+        return solicitacao;
+
+    } 
+    
+    public SolicitacaoEntity atualizarSolicitacaoId(Integer solicitacaoId) { 
+
+        SolicitacaoEntity solicitacao = getSolicitacaoId(solicitacaoId);
+        solicitacao.setNome(solicitacao.getNome());
+        solicitacao.setEmail(solicitacao.getEmail());
+        solicitacao.setData_entrada(solicitacao.getData_entrada());
+        solicitacao.setData_saida(solicitacao.getData_saida());
+        solicitacao.setQuarto_desejado(solicitacao.getQuarto_desejado());
+        solicitacao.setQuantidade_adultos(solicitacao.getQuantidade_adultos());
+        solicitacao.setQuantidade_criancas(solicitacao.getQuantidade_criancas());
+        solicitacao.setObservacao(solicitacao.getObservacao());
+        solicitacao.setStatus(true);
         
         solicitacaoRepository.save(solicitacao); 
         
