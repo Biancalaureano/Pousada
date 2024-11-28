@@ -29,7 +29,7 @@ function enviarSolicitacao() {
         .fail(function (msg) {
 
             // caso a solicitação de POST tenha falhado
-            alert("Falha no POST" + msg);
+            alert("Falha no envio");
 
         });
     };

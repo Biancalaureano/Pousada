@@ -6,6 +6,7 @@
         <title>Página quartos</title> 
         <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}">
         <link rel="stylesheet" th:href="@{/css/pagina-quartos.css}" /> 
+            <link th:href="@{/css/}+${css}+'.css'" rel="stylesheet" type="text/css"/> 
 
     </head> 
 
@@ -110,6 +111,9 @@
         </div>
     
         <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+        <script th:src="@{/jquery/jquery.js}"></script> 
+        
+        <script th:src="@{/js/cookie.js}"></script> 
         
     </body> 
 </html> 

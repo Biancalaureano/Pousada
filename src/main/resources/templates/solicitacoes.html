@@ -10,6 +10,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}">
         <link rel="stylesheet" th:href="@{/css/pagina-solicitacoes.css}" /> 
+            <link th:href="@{/css/}+${css}+'.css'" rel="stylesheet" type="text/css"/>   
             
     </head>
     <body>
@@ -75,6 +76,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <script th:src="@{/jquery/jquery.js}"></script> 
         
         <script th:src="@{/js/solicitacoes.js}"></script> 
+        <script th:src="@{/js/cookie.js}"></script> 
         
     </body>
 </html>

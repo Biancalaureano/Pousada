@@ -7,6 +7,7 @@
         <title>Pousada</title> 
         <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}">
         <link rel="stylesheet" th:href="@{/css/pagina-inicial.css}" /> 
+            <link th:href="@{/css/}+${css}+'.css'" rel="stylesheet" type="text/css"/> 
         
     </head> 
 
@@ -62,7 +63,7 @@
 
                                 <div class="col-sm-2">
 
-                                    <img src="https://pixel.cuboup.com/wp-content/uploads/edd/2021/08/Icone-Xicara-com-Cafe-Quente.jpg" alt="">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/2093/2093345.png" alt="">
                                     
                                 </div>
 
@@ -80,7 +81,7 @@
 
                                 <div class="col-sm-2">
 
-                                    <img src="https://static.vecteezy.com/ti/vetor-gratis/t2/552728-icone-de-de-localizacao-geografica-gratis-vetor.jpg" alt="">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/535/535239.png" alt="">
                                     
                                 </div>
 
@@ -306,6 +307,7 @@
        
         <script th:src="@{/js/validacoes.js}"></script> 
         <script th:src="@{/js/pagina-inicial.js}"></script> 
+        <script th:src="@{/js/cookie.js}"></script> 
 
     </body>
 </html> 

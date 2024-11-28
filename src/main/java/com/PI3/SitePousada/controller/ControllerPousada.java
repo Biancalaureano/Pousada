@@ -6,6 +6,10 @@ package com.PI3.SitePousada.controller;
 
 import com.PI3.SitePousada.Service.SolicitacaoService;
 import com.PI3.SitePousada.data.SolicitacaoEntity;
+import com.PI3.SitePousada.model.Preferencia;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,11 +18,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.stereotype.Controller; 
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 
 
@@ -29,9 +35,10 @@ public class ControllerPousada {
     SolicitacaoService solicitacaoService; 
     
     @GetMapping("/pagina-inicial") 
-     public String mostraPaginaInicial(Model model){ 
+     public String mostraPaginaInicial(@CookieValue(name="pref-tema", defaultValue="")String tema, Model model){ 
          
          model.addAttribute("solicitacao", new SolicitacaoEntity()); 
+         model.addAttribute("css", tema); 
          
          return "pagina-inicial"; 
          
@@ -42,7 +49,7 @@ public class ControllerPousada {
                   
         if (result.hasErrors()) { 
 
-            return "pagina-inicial"; 
+            return "redirect/l"; 
 
         } 
 
@@ -66,18 +73,21 @@ public class ControllerPousada {
      } 
      
      @GetMapping("/pagina-quartos") 
-     public String mostraPaginaQuarto(){ 
+     public String mostraPaginaQuarto(@CookieValue(name="pref-tema", defaultValue="")String tema,Model model){ 
+         
+         model.addAttribute("css", tema); 
          
          return "pagina-quartos"; 
          
      } 
      
      @GetMapping("/solicitacoes")
-    public String mostrarLista(Model model) {
+    public String mostrarLista(@CookieValue(name="pref-tema", defaultValue="")String tema, Model model) {
     
         List<SolicitacaoEntity> solicitacoes = solicitacaoService.listarTodasSolicitacoes();
         
         model.addAttribute("solicitacoes", solicitacoes);
+        model.addAttribute("css", tema); 
 
         return "solicitacoes";
     }
@@ -100,5 +110,17 @@ public class ControllerPousada {
         return ResponseEntity.ok("Atualizaçao bem-sucedida");
         
     }
+    
+    @PostMapping("/preferencias") 
+    public void gravaPreferencias(@ModelAttribute("preferencia") Preferencia pref, HttpServletResponse response){ 
+        
+        Cookie cookiePrefTema = new Cookie("pref-tema", pref.getTema()); 
+        cookiePrefTema.setDomain("localhost"); //disponível apenas no domínio "localhost" 
+        cookiePrefTema.setHttpOnly(true); //acessível apenas por HTTP, JS não 
+        cookiePrefTema.setMaxAge(86400); //1 dia 
+        response.addCookie(cookiePrefTema); 
+        System.out.println(cookiePrefTema);
+        
+    } 
     
 }
