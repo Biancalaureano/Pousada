@@ -214,22 +214,22 @@
                             
                                     <div class="mb-3"> 
                                         <label for="txtNome" class="form-label">Nome:</label> 
-                                        <input id="txtNome" class="form-control" type="text" name= "txtNome"> 
+                                        <input id="txtNome" class="form-control" type="text" name= "txtNome" th:field="${solicitacao.nome}"> 
                                     </div> 
                                     <div class="mb-3"> 
                                         <label for="txtDataEntrada" class="form-label">Data de entrada:</label> 
-                                        <input id="txtDataEntrada" class="form-control" type="date" name= "txtDataEntrada"> 
+                                        <input id="txtDataEntrada" class="form-control" type="date" name= "txtDataEntrada" th:field="${solicitacao.dataEntrada}"> 
                                     </div>
 
                                     <div class="mb-3"> 
                                         <label for="txtQuarto" class="form-label">Selecione o quarto desejado:</label> 
-                                        <select id="txtEmail" class="form-control" type="text" name= "txtEmail"></select>
+                                        <select id="txtQuarto" class="form-control" type="text" name= "txtQuarto" th:field="${solicitacao.quartoDesejado}"></select>
                                         
                                     </div> 
 
                                     <div class="mb-3"> 
                                         <label for="txtObservacoes" class="form-label">Observações:</label> 
-                                        <input id="txtObservacoes" class="form-control" type="text" name= "txtObservacoes"> 
+                                        <input id="txtObservacoes" class="form-control" type="text" name= "txtObservacoes" th:field="${solicitacao.observacao}"> 
                                     </div>
 
                                 </div>
@@ -238,11 +238,11 @@
                             
                                     <div class="mb-3"> 
                                         <label for="txtEmail" class="form-label">E-mail:</label> 
-                                        <input id="txtEmail" class="form-control" type="text" name= "txtEmail"> 
+                                        <input id="txtEmail" class="form-control" type="text" name= "txtEmail" th:field="${solicitacao.email}"> 
                                     </div> 
                                     <div class="mb-3"> 
                                         <label for="txtDataSaida" class="form-label">Data de Saída:</label> 
-                                        <input id="txtDataSaida" class="form-control" type="date" name= "txtDataSaida"> 
+                                        <input id="txtDataSaida" class="form-control" type="date" name= "txtDataSaida" th:field="${solicitacao.dataSaida}"> 
                                     </div>
 
                                     <div class="row">
@@ -250,14 +250,14 @@
                                         <div class="col-sm-4">
                                             <div class="mb-3"> 
                                                 <label for="txtCriancas" class="form-label">Adultos:</label> 
-                                                <input id="txtCriancas" class="form-control" type="text" name= "txtCriancas"> 
+                                                <input id="txtCriancas" class="form-control" type="text" name= "txtCriancas" th:field="${solicitacao.quantidadeCriancas}"> 
                                             </div>
                                         </div>
 
                                         <div class="col-sm-4">
                                             <div class="mb-3"> 
                                                 <label for="txtAdultos" class="form-label">Crianças:</label> 
-                                                <input id="txtAdultos" class="form-control" type="text" name= "txtAdultos"> 
+                                                <input id="txtAdultos" class="form-control" type="text" name= "txtAdultos" th:field="${solicitacao.quantidadeAdultos}"> 
                                             </div>
                                         </div>
 
