@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Solicitações</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}">
+        <link rel="stylesheet" th:href="@{/css/pagina-solicitacoes.css}" /> 
+            
+    </head>
+    <body>
+        
+        <div id="pagina" class="container justify-content-center">
+
+            <header class="container borda" th:insert="navbar.html :: nav">
+                
+            </header>
+        
+            <div>
+                <table class="table table-striped">
+
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Data de entrada</th>
+                        <th>Data de saída</th>
+                        <th>Quarto desejado</th>
+                        <th>Quantidade de adultos</th>
+                        <th>Quantidade de crianças</th>
+                        <th>Observações</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+
+                    <tr th:each="solicitacao : ${solicitacoes}">
+                        <td th:text="${solicitacao.id}"></td>
+                        <td th:text="${solicitacao.email}"></td>
+                        <td th:text="${solicitacao.dataEntrada}"></td>
+                        <td th:text="${solicitacao.dataSaida}"></td>
+                        <td th:text="${solicitacao.quartoDesejado}"></td>
+                        <td th:text="${solicitacao.quantidadeAdultos}"></td>
+                        <td th:text="${solicitacao.quantidadeCriancas}"></td>
+                        <td th:text="${solicitacao.observacao}"></td>
+                        
+                        <td>
+                    
+                            <a>Excluir</a>
+                    
+                        </td>
+                        <td>
+                    
+                            <a>Atualizar</a>
+                    
+                        </td>
+
+                    </tr>
+
+                </table>
+            </div>
+            
+        </div>
+        
+        <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script> 
+        
+    </body>
+</html>

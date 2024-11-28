@@ -47,5 +47,14 @@ public class ControllerPousada {
          return "pagina-quartos"; 
          
      } 
+     
+     @GetMapping("/solicitacoes")
+    public String mostrarLista(Model model) {
+    
+        List<Solicitacao> solicitacoes = listaSolicitacoes;
+        model.addAttribute("solicitacoes", solicitacoes);
+
+        return "solicitacoes";
+    }
     
 }
