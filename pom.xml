@@ -8,13 +8,17 @@
 		<version>3.2.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.PI3</groupId>
+	<groupId>com.PI3.SitePousada</groupId>
 	<artifactId>Site-Pousada</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Site-Pousada</name>
 	<description>Demo project for Spring Boot</description>
+                 <packaging>war</packaging>
+
+                  
 	<properties>
 		<java.version>21</java.version>
+                                    <start-class>com.PI3.SitePousada.SitePousadaApplication</start-class>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -52,10 +56,13 @@
 	</dependencies>
 
 	<build>
+            
+                                   <finalName>${artifactId}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+                                
 				<configuration>
 					<excludes>
 						<exclude>
@@ -65,6 +72,7 @@
 					</excludes>
 				</configuration>
 			</plugin>
+                        
 		</plugins>
 	</build>
 
