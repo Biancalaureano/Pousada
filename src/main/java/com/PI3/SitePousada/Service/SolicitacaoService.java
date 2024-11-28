@@ -33,11 +33,11 @@ public class SolicitacaoService {
         SolicitacaoEntity solicitacao = getSolicitacaoId(solicitacaoId);
         solicitacao.setNome(solicitacaoRequest.getNome());
         solicitacao.setEmail(solicitacaoRequest.getEmail());
-        solicitacao.setDataEntrada(solicitacaoRequest.getDataEntrada());
-        solicitacao.setDataSaida(solicitacaoRequest.getDataSaida());
-        solicitacao.setQuartoDesejado(solicitacaoRequest.getQuartoDesejado());
-        solicitacao.setQuantidadeAdultos(solicitacaoRequest.getQuantidadeAdultos());
-        solicitacao.setQuantidadeCriancas(solicitacaoRequest.getQuantidadeCriancas());
+        solicitacao.setData_entrada(solicitacaoRequest.getData_entrada());
+        solicitacao.setData_saida(solicitacaoRequest.getData_saida());
+        solicitacao.setQuarto_desejado(solicitacaoRequest.getQuarto_desejado());
+        solicitacao.setQuantidade_adultos(solicitacaoRequest.getQuantidade_adultos());
+        solicitacao.setQuantidade_criancas(solicitacaoRequest.getQuantidade_criancas());
         solicitacao.setObservacao(solicitacaoRequest.getObservacao());
         
         solicitacaoRepository.save(solicitacao); 

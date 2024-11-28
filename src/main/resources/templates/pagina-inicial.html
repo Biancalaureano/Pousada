@@ -218,12 +218,12 @@
                                     </div> 
                                     <div class="mb-3"> 
                                         <label for="txtDataEntrada" class="form-label">Data de entrada:</label> 
-                                        <input id="txtDataEntrada" class="form-control" type="date" name= "txtDataEntrada" th:field="${solicitacao.dataEntrada}"> 
+                                        <input id="txtDataEntrada" class="form-control" type="date" name= "txtDataEntrada" th:field="${solicitacao.data_entrada}"> 
                                     </div>
 
                                     <div class="mb-3"> 
                                         <label for="txtQuarto" class="form-label">Selecione o quarto desejado:</label> 
-                                        <select id="txtQuarto" class="form-control" type="text" name= "txtQuarto" th:field="${solicitacao.quartoDesejado}">
+                                        <select id="txtQuarto" class="form-control" type="text" name= "txtQuarto" th:field="${solicitacao.quarto_desejado}">
                                             
                                             <option value="Suite Solteiro">Suite Solteiro</option>
                                             <option value="Suite Casal">Suite Casal</option>
@@ -248,7 +248,7 @@
                                     </div> 
                                     <div class="mb-3"> 
                                         <label for="txtDataSaida" class="form-label">Data de Saída:</label> 
-                                        <input id="txtDataSaida" class="form-control" type="date" name= "txtDataSaida" th:field="${solicitacao.dataSaida}"> 
+                                        <input id="txtDataSaida" class="form-control" type="date" name= "txtDataSaida" th:field="${solicitacao.data_saida}"> 
                                     </div>
 
                                     <div class="row">
@@ -256,14 +256,14 @@
                                         <div class="col-sm-4">
                                             <div class="mb-3"> 
                                                 <label for="txtCriancas" class="form-label">Adultos:</label> 
-                                                <input id="txtCriancas" class="form-control" type="text" name= "txtCriancas" th:field="${solicitacao.quantidadeCriancas}"> 
+                                                <input id="txtCriancas" class="form-control" type="text" name= "txtCriancas" th:field="${solicitacao.quantidade_criancas}"> 
                                             </div>
                                         </div>
 
                                         <div class="col-sm-4">
                                             <div class="mb-3"> 
                                                 <label for="txtAdultos" class="form-label">Crianças:</label> 
-                                                <input id="txtAdultos" class="form-control" type="text" name= "txtAdultos" th:field="${solicitacao.quantidadeAdultos}"> 
+                                                <input id="txtAdultos" class="form-control" type="text" name= "txtAdultos" th:field="${solicitacao.quantidade_adultos}"> 
                                             </div>
                                         </div>
 

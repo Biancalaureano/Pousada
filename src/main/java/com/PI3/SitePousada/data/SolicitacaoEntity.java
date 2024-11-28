@@ -4,11 +4,13 @@
  */
 package com.PI3.SitePousada.data;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotNull;
 import java.time.LocalDate;
 import lombok.Data;
 
@@ -25,11 +27,11 @@ public class SolicitacaoEntity {
     
     private String nome;
     private  String email;
-    private LocalDate dataEntrada;
-    private LocalDate dataSaida;
-    private String quartoDesejado;
-    private int quantidadeAdultos;
-    private int quantidadeCriancas;
+    private LocalDate data_entrada;
+    private LocalDate data_saida;
+    private String quarto_desejado;
+    private int quantidade_adultos;
+    private int quantidade_criancas;
     private String observacao;
 
 }
