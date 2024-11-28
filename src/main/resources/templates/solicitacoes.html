@@ -36,7 +36,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <th>       </th>
                     </tr>
 
-                    <tr th:each="solicitacao : ${solicitacoes}">
+                    <tr th:each="solicitacao : ${solicitacoes}" data-id="${solicitacao.id}">
                         <td th:text="${solicitacao.id}"></td>
                         <td th:text="${solicitacao.nome}"></td>
                         <td th:text="${solicitacao.email}"></td>
@@ -49,7 +49,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         
                         <td>
                     
-                            <a  id="excluir" class="btn btn-danger">Excluir</a>
+                            <a class="btn btn-danger excluir" th:href="@{/solicitacoes/deletar/{id}(id=${solicitacao.id})}">Excluir</a>
                     
                         </td>
                     </tr>
