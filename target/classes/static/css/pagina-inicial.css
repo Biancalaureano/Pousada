@@ -1,0 +1,103 @@
+/* 
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Other/javascript.js to edit this template
+ */
+
+
+body {
+
+    background: #0ca002;
+}
+
+#pagina {
+
+    background-color:white ;
+    padding: 0;
+}
+
+header {
+
+    background-color: dimgrey;
+}
+
+header h4 {
+
+    color: white;
+}
+
+.borda {
+
+    border: 1px solid black;
+}
+
+.espacamento {
+
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.titulo {
+
+    margin: 50px;
+}
+
+.titulo button {
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h5 {
+
+    margin: 40px;
+}
+
+.vantagens {
+
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.vantagens img {
+
+    width: 80px;
+    right: 80px;
+}
+
+.imagem-quarto {
+    max-width: 100%; 
+    height: 150px; 
+}
+
+
+h6 {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+
+    margin-bottom: 20px;
+}
+
+footer {
+
+    margin-top: 30px;
+}
+
+#txtObservacoes {
+
+    padding-bottom: 60px;
+}
+
+#form-submit {
+
+    width: 70%;
+    margin-top: 30px;
+}
+
+footer h5 {
+
+    margin-left: auto;
+}

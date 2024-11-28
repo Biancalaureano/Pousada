@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Pousada</title> 
+        <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}">
+        <link rel="stylesheet" th:href="@{/css/pagina-inicial.css}" /> 
+        
+    </head> 
+
+    <body>
+
+        <div id="pagina" class="container justify-content-center">
+
+            <header class="container borda">
+                <div class="row">
+                    <div class="col-sm-12">
+
+                        <h4>POUSADA</h4>
+
+                    </div>
+                </div>
+            </header>
+
+            
+            <div class="container">
+                <div class="col-sm-10 mx-auto">
+                
+                    <div class="row justify-content-center">
+                        <div class="col-sm-4 borda titulo">
+
+                            <h2>Sinta o conforto acolhedor de nossas hospedagens</h2>
+
+                            <p>Rodeada por paisagens deslumbrantes, oferecemos conforto e 
+                                hospitalidade excepcionais. Reserve agora e viva uma experiência inesquecível!</p>
+
+                        </div>
+
+                        <div class="col-sm-6">
+
+                            <figure>
+                                
+                                <img class="img-fluid borda" th:src="@{/images/telhado-de-palha-em-uma-casa.jpg}" alt="">
+                                <figcaption>Fonte: <a href="https://br.freepik.com/fotos-gratis/telhado-de-palha-em-uma-casa_7168050.htm#query=pousada&position=12&from_view=search&track=sph">Imagem de brgfx</a> no Freepik</figcaption>
+                                
+                           </figure>
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <main class="container">
+    
+                <div class="col-sm-12">
+
+                    <h5 class="text-center">POR QUE SE HOSPEDAR EM NOSSA POUSADA?</h5>
+
+                </div>
+
+                <div class="container vantagens">
+                    <div class="row justify-content-center espacamento">
+                        <div class="col-sm-5">
+                            <div class="row">
+
+                                <div class="col-sm-2">
+
+                                    <img src="https://pixel.cuboup.com/wp-content/uploads/edd/2021/08/Icone-Xicara-com-Cafe-Quente.jpg" alt="">
+                                    
+                                </div>
+
+                                <div class="col-sm-9">
+
+                                    <h6>Delicioso café da manhã</h6>
+                                    <p>Incluso em todas as diárias</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-5">
+                            <div class="row">
+
+                                <div class="col-sm-2">
+
+                                    <img src="https://static.vecteezy.com/ti/vetor-gratis/t2/552728-icone-de-de-localizacao-geografica-gratis-vetor.jpg" alt="">
+                                    
+                                </div>
+
+                                <div class="col-sm-9">
+
+                                    <h6>Fácil acesso</h6>
+                                    <p>Perto dos principais pontos turísticos</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-5">
+                            <div class="row">
+
+                                <div class="col-sm-2">
+
+                                    <img src="https://images.vexels.com/media/users/3/223108/isolated/preview/0f95f85f4e2a840d892c40251c215e64-icone-de-piscina-de-nadador-de-rastreamento.png" alt="">
+                                    
+                                </div>
+
+                                <div class="col-sm-9">
+
+                                    <h6>Piscina</h6>
+                                    <p>Relaxe e mergulhe na diversão na nossa piscina paradisíaca</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-5">
+                            <div class="row">
+
+                                <div class="col-sm-2">
+
+                                    <img src="https://cdn.icon-icons.com/icons2/1115/PNG/512/1486071980-1_79325.png" alt="">
+                                    
+                                </div>
+
+                                <div class="col-sm-9">
+
+                                    <h6>Restaurante</h6>
+                                    <p>Com cardapio criado por chefes renomados</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+
+
+                <div class="container text-center">
+                    <div class="col-sm-10 borda mx-auto">
+
+                        <h6>NOSSOS QUARTOS</h6>
+
+                        <div class="row justify-content-center">
+
+                            <div class="col-sm-3">
+
+                                <figure>
+                                
+                                    <img class="img-fluid borda imagem-quarto" th:src="@{/images/arranjos-de-cama-ainda-vida.jpg}" alt="">
+                                    <figcaption>Fonte: Imagem de <a href="https://br.freepik.com/fotos-gratis/arranjos-de-cama-ainda-vida_47696378.htm">Freepik</a></figcaption>
+
+                                </figure>
+                                    
+                                <p>Suite Solteiro</p>
+
+                            </div>
+                        
+                            <div class="col-sm-3">
+                                
+                                <figure>
+                                
+                                    <img class="img-fluid borda imagem-quarto" th:src="@{/images/quarto-pequeno-do-hotel-com-paredes-brancas-e-a-janela-panoramico.jpg}" alt="">
+                                    <figcaption>Fonte: <a href="https://br.freepik.com/fotos-gratis/quarto-pequeno-do-hotel-com-paredes-brancas-e-a-janela-panoramico_2448970.htm">Imagem de katemangostar</a> no Freepik</figcaption>
+
+                                </figure>
+                                
+                                <p>Suite Casal</p>
+
+                            </div>
+
+                            <div class="col-sm-3">
+
+                                <figure>
+                                
+                                    <img class="img-fluid borda imagem-quarto" th:src="@{/images/437.jpg}" alt="">
+                                    <figcaption>Fonte: <a href="https://br.freepik.com/psd-gratuitas/quarto-duplo-moderno-realista-com-moveis-e-uma-moldura_7041389.htm">Imagem de alexandercho</a> no Freepik</figcaption>
+
+                                </figure>
+                                
+                                <p>Suite VIP</p>
+
+                            </div>
+
+                        </div>
+
+                        <button type="button" class="btn btn-primary">Ver Informações dos quartos</button>
+
+                    </div>
+                </div>
+
+            </main>
+
+            <footer>
+
+                <div class="container">
+                    <div class="col-sm-12 borda">
+
+                        <form id="form" action="" method="POST">
+                            <div class="row justify-content-center espacamento">
+
+                                <div class="col-sm-3">
+
+                                    <h5>FAÇA SUA RESERVA</h5>
+
+                                    <p>Entre em contato conosco informando as datas desejadas. 
+                                        Lhe retornaremos informando a disponibilidade e repassando detalhes da reserva.
+                                    </p>
+
+                                </div>
+
+                                <div class="col-sm-3">
+                            
+                                    <div class="mb-3"> 
+                                        <label for="txtNome" class="form-label">Nome:</label> 
+                                        <input id="txtNome" class="form-control" type="text" name= "txtNome"> 
+                                    </div> 
+                                    <div class="mb-3"> 
+                                        <label for="txtDataEntrada" class="form-label">Data de entrada:</label> 
+                                        <input id="txtDataEntrada" class="form-control" type="date" name= "txtDataEntrada"> 
+                                    </div>
+
+                                    <div class="mb-3"> 
+                                        <label for="txtQuarto" class="form-label">Selecione o quarto desejado:</label> 
+                                        <select id="txtEmail" class="form-control" type="text" name= "txtEmail"></select>
+                                        
+                                    </div> 
+
+                                    <div class="mb-3"> 
+                                        <label for="txtObservacoes" class="form-label">Observações:</label> 
+                                        <input id="txtObservacoes" class="form-control" type="text" name= "txtObservacoes"> 
+                                    </div>
+
+                                </div>
+
+                                <div class="col-sm-3">
+                            
+                                    <div class="mb-3"> 
+                                        <label for="txtEmail" class="form-label">E-mail:</label> 
+                                        <input id="txtEmail" class="form-control" type="text" name= "txtEmail"> 
+                                    </div> 
+                                    <div class="mb-3"> 
+                                        <label for="txtDataSaida" class="form-label">Data de Saída:</label> 
+                                        <input id="txtDataSaida" class="form-control" type="date" name= "txtDataSaida"> 
+                                    </div>
+
+                                    <div class="row">
+
+                                        <div class="col-sm-4">
+                                            <div class="mb-3"> 
+                                                <label for="txtCriancas" class="form-label">Adultos:</label> 
+                                                <input id="txtCriancas" class="form-control" type="text" name= "txtCriancas"> 
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-4">
+                                            <div class="mb-3"> 
+                                                <label for="txtAdultos" class="form-label">Crianças:</label> 
+                                                <input id="txtAdultos" class="form-control" type="text" name= "txtAdultos"> 
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="mb-3"> 
+                                        <input id="form-submit" type="submit" class="btn btn-primary" value="Enviar" > 
+                                    </div> 
+
+                                    <div id="result"></div>
+
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </footer>
+
+        </div>
+    
+        <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script> 
+
+    </body> 
+</html> 
