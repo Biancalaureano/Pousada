@@ -1,0 +1,79 @@
+
+body {
+
+    background: #0ca002;
+}
+
+#pagina {
+
+    background-color:white ;
+    padding: 0;
+}
+
+header {
+
+    background-color: dimgrey;
+}
+
+header h4 {
+
+    color: white;
+}
+
+.borda {
+
+    border: 1px solid black;
+}
+
+.borda-principal {
+
+    border: 4px solid black;
+}
+
+.detalhes {
+
+    text-align: start;
+    padding: 0;
+}
+
+.quartos {
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.quarto {
+
+    margin: 20px;
+}
+
+main {
+
+    margin-top: 20px;
+}
+
+
+
+.imagem-quarto {
+
+    max-width: 400px; 
+    height: 250px; 
+}
+
+h3 {
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+h6 {
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+

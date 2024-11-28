@@ -10,13 +10,21 @@ import org.springframework.ui.Model;
 
 
 
+
 @Controller
 public class ControllerPousada {
     
     @GetMapping("/pagina-inicial") 
-     public String mostraPagina(){ 
+     public String mostraPaginaInicial(){ 
          
          return "pagina-inicial"; 
+         
+     } 
+     
+     @GetMapping("/pagina-quartos") 
+     public String mostraPaginaQuarto(){ 
+         
+         return "pagina-quartos"; 
          
      } 
     
