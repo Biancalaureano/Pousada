@@ -32,17 +32,6 @@ header {
     margin-right: 5px;
 }
 
-.titulo {
-
-    margin: 50px;
-}
-
-.titulo button {
-
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
 h5 {
 
     margin: 40px;
@@ -65,15 +54,15 @@ h5 {
     height: 150px; 
 }
 
+.botao-quartos{
+
+    margin-bottom: 20px;
+}
+
 
 h6 {
 
     margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-button {
-
     margin-bottom: 20px;
 }
 
