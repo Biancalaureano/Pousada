@@ -197,7 +197,7 @@
                 <div class="container">
                     <div class="col-sm-12 borda">
 
-                        <form id="form" action="" method="POST">
+                        <form id="form" th:object="${solicitacao}">
                             <div class="row justify-content-center espacamento">
 
                                 <div class="col-sm-3">
@@ -214,28 +214,33 @@
                             
                                     <div class="mb-3"> 
                                         <label for="txtNome" class="form-label">Nome:</label> 
-                                        <input id="txtNome" class="form-control" type="text"  th:field="${solicitacao.nome}"> 
+                                        <input id="txtNome" class="form-control" type="text"  th:field="*{nome}"> 
+                                            <span class= "text-danger" th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></span>
+                                            
                                     </div> 
                                     <div class="mb-3"> 
                                         <label for="txtDataEntrada" class="form-label">Data de entrada:</label> 
-                                        <input id="txtDataEntrada" class="form-control" type="date" name= "txtDataEntrada" th:field="${solicitacao.data_entrada}"> 
+                                        <input id="txtDataEntrada" class="form-control" type="date" name= "txtDataEntrada" th:field="*{data_entrada}"> 
+                                            <span class= "text-danger" th:if="${#fields.hasErrors('data_entrada')}" th:errors="*{data_entrada}"></span>
+                                            
                                     </div>
 
                                     <div class="mb-3"> 
                                         <label for="txtQuarto" class="form-label">Selecione o quarto desejado:</label> 
-                                        <select id="txtQuarto" class="form-control" type="text" name= "txtQuarto" th:field="${solicitacao.quarto_desejado}">
+                                        <select id="txtQuarto" class="form-control" type="text" name= "txtQuarto" th:field="*{quarto_desejado}">
                                             
                                             <option value="Suite Solteiro">Suite Solteiro</option>
                                             <option value="Suite Casal">Suite Casal</option>
                                             <option value="Suite VIP">Suite VIP</option>
 
                                         </select>
-                                        
+                                        <span class= "text-danger" th:if="${#fields.hasErrors('quarto_desejado')}" th:errors="*{quarto_desejado}"></span>
+                                            
                                     </div> 
 
                                     <div class="mb-3"> 
                                         <label for="txtObservacoes" class="form-label">Observações:</label> 
-                                        <input id="txtObservacoes" class="form-control" type="text" name= "txtObservacoes" th:field="${solicitacao.observacao}"> 
+                                        <input id="txtObservacoes" class="form-control" type="text" name= "txtObservacoes" th:field="*{observacao}"> 
                                     </div>
 
                                 </div>
@@ -244,11 +249,15 @@
                             
                                     <div class="mb-3"> 
                                         <label for="txtEmail" class="form-label">E-mail:</label> 
-                                        <input id="txtEmail" class="form-control" type="text" name= "txtEmail" th:field="${solicitacao.email}"> 
+                                        <input id="txtEmail" class="form-control" type="text" name= "txtEmail" th:field="*{email}"> 
+                                            <span class= "text-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+                                          
                                     </div> 
                                     <div class="mb-3"> 
                                         <label for="txtDataSaida" class="form-label">Data de Saída:</label> 
-                                        <input id="txtDataSaida" class="form-control" type="date" name= "txtDataSaida" th:field="${solicitacao.data_saida}"> 
+                                        <input id="txtDataSaida" class="form-control" type="date" name= "txtDataSaida" th:field="*{data_saida}"> 
+                                            <span class= "text-danger" th:if="${#fields.hasErrors('data_saida')}" th:errors="*{data_saida}"></span>
+                                          
                                     </div>
 
                                     <div class="row">
@@ -256,14 +265,18 @@
                                         <div class="col-sm-4">
                                             <div class="mb-3"> 
                                                 <label for="txtCriancas" class="form-label">Adultos:</label> 
-                                                <input id="txtCriancas" class="form-control" type="text" name= "txtCriancas" th:field="${solicitacao.quantidade_criancas}"> 
+                                                <input id="txtCriancas" class="form-control" type="text" name= "txtCriancas" th:field="*{quantidade_criancas}"> 
+                                                    <span class= "text-danger" th:if="${#fields.hasErrors('quantidade_criancas')}" th:errors="*{quantidade_criancas}"></span>
+                                          
                                             </div>
                                         </div>
 
                                         <div class="col-sm-4">
                                             <div class="mb-3"> 
                                                 <label for="txtAdultos" class="form-label">Crianças:</label> 
-                                                <input id="txtAdultos" class="form-control" type="text" name= "txtAdultos" th:field="${solicitacao.quantidade_adultos}"> 
+                                                <input id="txtAdultos" class="form-control" type="text" name= "txtAdultos" th:field="*{quantidade_adultos}"> 
+                                                    <span class= "text-danger" th:if="${#fields.hasErrors('quantidade_adultos')}" th:errors="*{quantidade_adultos}"></span>
+                                          
                                             </div>
                                         </div>
 
@@ -271,7 +284,7 @@
 
 
                                     <div class="mb-3"> 
-                                        <input id="form-submit" type="submit" class="btn btn-primary" value="Enviar" > 
+                                        <input id="form-submit" type="button" onclick="enviarSolicitacao()" class="btn btn-primary" value="Enviar" > 
                                     </div> 
 
                                 </div>
@@ -289,6 +302,7 @@
         <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script> 
         <script th:src="@{/jquery/jquery.js}"></script> 
         <script th:src="@{/jquery/mask.min.js}"></script>
+        <script th:src="@{/jquery/jquery.validate.js}"></script> 
        
         <script th:src="@{/js/validacoes.js}"></script> 
         <script th:src="@{/js/pagina-inicial.js}"></script> 

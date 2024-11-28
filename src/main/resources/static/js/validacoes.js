@@ -8,4 +8,3 @@
      $('#txtAdultos').mask('0');
 
  });
-

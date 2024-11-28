@@ -4,12 +4,14 @@
  */
 package com.PI3.SitePousada.data;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import java.time.LocalDate;
 import lombok.Data;
@@ -25,13 +27,27 @@ public class SolicitacaoEntity {
     @GeneratedValue(strategy = GenerationType.AUTO) 
     private Integer id;
     
+    @NotEmpty(message="Nome obrigatório")
     private String nome;
+    
+    @Email(message="E-mail inválido")
     private  String email;
+    
+    @NotNull(message="Data de entrada é obrigatório") 
     private LocalDate data_entrada;
+    
+    @NotNull(message="Data de saída é obrigatório") 
     private LocalDate data_saida;
+    
+    @NotBlank(message="Quarto obrigatório")
     private String quarto_desejado;
+    
+    @NotNull()
     private int quantidade_adultos;
+    
+    @NotNull()
     private int quantidade_criancas;
+    
     private String observacao;
 
 }
