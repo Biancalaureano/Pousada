@@ -33,8 +33,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <th>Quantidade de adultos</th>
                         <th>Quantidade de crianças</th>
                         <th>Observações</th>
-                        <th></th>
-                        <th></th>
+                        <th>       </th>
                     </tr>
 
                     <tr th:each="solicitacao : ${solicitacoes}">
@@ -49,15 +48,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         
                         <td>
                     
-                            <a>Excluir</a>
+                            <a  class="btn btn-danger">Excluir</a>
                     
                         </td>
-                        <td>
-                    
-                            <a>Atualizar</a>
-                    
-                        </td>
-
                     </tr>
 
                 </table>

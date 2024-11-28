@@ -30,14 +30,13 @@ public class ControllerPousada {
      } 
      
      @PostMapping("/pagina-inicial") 
-     public String recebeCadastro(Model model, @ModelAttribute Solicitacao solicitacao){ 
+     public void recebeCadastro(Model model, @ModelAttribute Solicitacao solicitacao){ 
                     
      solicitacao.setId(listaSolicitacoes.size());
          
      listaSolicitacoes.add(solicitacao);
      model.addAttribute("solicitacao", solicitacao); 
      
-     return "/pagina-inicial"; 
      
      } 
      

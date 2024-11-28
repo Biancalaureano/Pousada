@@ -214,7 +214,7 @@
                             
                                     <div class="mb-3"> 
                                         <label for="txtNome" class="form-label">Nome:</label> 
-                                        <input id="txtNome" class="form-control" type="text" name= "txtNome" th:field="${solicitacao.nome}"> 
+                                        <input id="txtNome" class="form-control" type="text"  th:field="${solicitacao.nome}"> 
                                     </div> 
                                     <div class="mb-3"> 
                                         <label for="txtDataEntrada" class="form-label">Data de entrada:</label> 
@@ -268,8 +268,6 @@
                                         <input id="form-submit" type="submit" class="btn btn-primary" value="Enviar" > 
                                     </div> 
 
-                                    <div id="result"></div>
-
                                 </div>
                             </div>
 
@@ -285,9 +283,9 @@
         <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script> 
         <script th:src="@{/jquery/jquery.js}"></script> 
         <script th:src="@{/jquery/mask.min.js}"></script>
-        <script th:src="@{/jquery/validate.js}"></script>
-        
+       
         <script th:src="@{/js/validacoes.js}"></script> 
+        <script th:src="@{/js/script.js}"></script> 
 
     </body>
 </html> 
