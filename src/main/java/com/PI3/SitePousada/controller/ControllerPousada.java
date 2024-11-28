@@ -10,7 +10,6 @@ import org.springframework.ui.Model;
 
 
 
-
 @Controller
 public class ControllerPousada {
     
