@@ -4,7 +4,7 @@
  */
 package com.PI3.SitePousada.controller;
 
-import com.PI3.SitePousada.controller.model.Solicitacao;
+import com.PI3.SitePousada.data.SolicitacaoEntity;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.http.ResponseEntity;
@@ -21,19 +21,19 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class ControllerPousada {
     
-    private List<Solicitacao> listaSolicitacoes = new ArrayList<>();
+    private List<SolicitacaoEntity> listaSolicitacoes = new ArrayList<>();
     
     @GetMapping("/pagina-inicial") 
      public String mostraPaginaInicial(Model model){ 
          
-         model.addAttribute("solicitacao", new Solicitacao()); 
+         model.addAttribute("solicitacao", new SolicitacaoEntity()); 
          
          return "pagina-inicial"; 
          
      } 
      
      @PostMapping("/pagina-inicial") 
-     public void recebeCadastro(Model model, @ModelAttribute Solicitacao solicitacao){ 
+     public void recebeCadastro(Model model, @ModelAttribute SolicitacaoEntity solicitacao){ 
                     
      solicitacao.setId(listaSolicitacoes.size());
          
@@ -53,7 +53,7 @@ public class ControllerPousada {
      @GetMapping("/solicitacoes")
     public String mostrarLista(Model model) {
     
-        List<Solicitacao> solicitacoes = listaSolicitacoes;
+        List<SolicitacaoEntity> solicitacoes = listaSolicitacoes;
         model.addAttribute("solicitacoes", solicitacoes);
 
         return "solicitacoes";
