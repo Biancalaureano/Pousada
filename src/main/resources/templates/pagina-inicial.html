@@ -223,7 +223,13 @@
 
                                     <div class="mb-3"> 
                                         <label for="txtQuarto" class="form-label">Selecione o quarto desejado:</label> 
-                                        <select id="txtQuarto" class="form-control" type="text" name= "txtQuarto" th:field="${solicitacao.quartoDesejado}"></select>
+                                        <select id="txtQuarto" class="form-control" type="text" name= "txtQuarto" th:field="${solicitacao.quartoDesejado}">
+                                            
+                                            <option value="Suite Solteiro">Suite Solteiro</option>
+                                            <option value="Suite Casal">Suite Casal</option>
+                                            <option value="Suite VIP">Suite VIP</option>
+
+                                        </select>
                                         
                                     </div> 
 
