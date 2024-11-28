@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Incluir o arquivo application.properties no controle de versão
+!application.properties
